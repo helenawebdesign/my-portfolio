@@ -1,0 +1,409 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #3D3D3D;
+	font-family: "Poppins", serif;
+	color: #ffffff;
+}
+
+section{
+	padding: 80px 0;
+}
+
+h1{
+	font-size: 100px;
+}
+
+h2{
+	font-family: "Smooch Sans", serif;
+	font-size: 52px;
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+h3{
+	font-size: 20px;
+	font-weight: 200;
+}
+
+p{
+	font-size: 16px;
+}
+
+span{
+	font-weight: 100;
+}
+
+a{
+	text-decoration: none;
+}
+
+.container{
+	width: 90%;
+	max-width: 1400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* START Section 1 */
+.hero{
+	padding: 350px 0;
+	text-align: center;
+	background: url(https://static1.squarespace.com/static/538a3874e4b0ab1541d204ad/t/58d2cd22e58c621134032a0a/1490210098225/?format=1500w) rgba(000, 000, 000, 70%);
+	background-blend-mode: overlay;
+	background-size: cover;
+	background-position: center;
+}
+
+.hero h3{
+	font-size: 60px;
+	font-weight: 200;
+}
+
+.hero p{
+	font-family: "Smooch Sans", serif;
+	text-transform: uppercase;
+	font-size: 36px;
+	letter-spacing: 2px;
+}
+
+.hero h1, h3, p {
+	opacity: 0;
+    animation: zoomIn 3s ease-out forwards;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8); /* Start smaller */
+        opacity: 0; /* Start invisible */
+    }
+    100% {
+        transform: scale(1); /* End at normal size */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+
+/* END Section 1 */
+
+/* START Section 2 */
+.skills{
+	text-align: center;
+}
+.skills-grid{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+}
+
+.skills-card{
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: 30px;
+	border-radius: 20px;
+	transition: transform 0.3s ease;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg) translate(0, 0);
+    }
+    25% {
+        transform: rotate(2deg) translate(1px, 1px); /* Very subtle rotation + movement */
+    }
+    50% {
+        transform: rotate(-2deg) translate(-1px, -1px); /* Reverse subtle rotation + movement */
+    }
+    75% {
+        transform: rotate(2deg) translate(1px, -1px); /* Very subtle rotation + movement */
+    }
+    100% {
+        transform: rotate(-2deg) translate(-1px, 1px); /* Reverse subtle rotation + movement */
+    }
+}
+
+.skills-card:hover {
+    animation: shake 0.7s ease-in-out;
+    animation-iteration-count: 1; 
+}
+
+.skills-img{
+	height: 100px;
+	margin-bottom: 20px;
+}
+.skills-img1{
+	background: url(html.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat; 
+}
+
+.skills-img2{
+	background: url(css.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat; 
+}
+
+.skills-img3{
+	background: url(js.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat; 
+}
+
+.skills-img4{
+	background: url(wordpress.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat; 
+}
+
+.skills-img5{
+	background: url(dj.svg);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat; 
+}
+
+.skills-img6{
+	background: url(react.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat; 
+}
+/* END Section 2 */
+
+/* START Section 3 */
+.portfolio{
+	text-align: center;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.05);
+}
+.portfolio p{
+	font-weight: 200;
+}
+
+.portfolio-grid{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 70px;
+}
+
+.portfolio-card{
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.portfolio-img{
+	height: 325px;
+	margin-bottom: 20px;
+	border-radius: 15px;
+}
+
+.portfolio-img1{
+	background: url(Wildflower.png);
+	background-size: cover;
+	background-position: center;
+}
+
+.portfolio-img2{
+	background: url(keffahouse.png);
+	background-size: cover;
+	background-position: center;
+}
+
+.portfolio-img3{
+	background: url(WeatherApp.png);
+	background-size: cover;
+	background-position: center;
+}
+
+.portfolio-img4{
+	background: url(karinjaponais.png);
+	background-size: cover;
+	background-position: center;
+}
+
+.image-modal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; 
+    transform: scale(0.8); 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.image-modal.show {
+    opacity: 1; 
+    transform: scale(1); 
+}
+
+.image-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* END Section 3 */
+
+/* START Section 4 */
+.about{
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.about p{
+	line-height: 25px;
+}
+
+.about-flex{
+	display: flex;
+	gap: 50px;
+	align-items: center;
+}
+
+.about-img{
+	width: 50%;
+	background: url(helena3.jpg);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat; 
+	filter: grayscale(100%);
+	height: 400px;
+}
+
+.about-text{
+	width: 50%;
+}
+/* END Section 4 */
+
+/* START Section 5 */
+.contact{
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.05);
+}
+.contact h3{
+	text-transform: uppercase;
+	color: #798645;
+	font-size: 16px;
+}
+
+.contact p{
+	font-weight: 200;
+}
+
+.contact i{
+	color: #9BA86A;
+	font-size: 36px;
+	cursor: pointer;
+	transition: 0.3s ease;
+	margin-bottom: 15px;
+}
+
+.contact i:hover{
+	color: #575F2E;
+}
+
+.resume{
+	color: #798645;
+	transition: 0.3s ease;
+}
+
+.resume:hover{
+	color: #575F2E;
+}
+.contact-flex{
+	display: flex;
+	gap: 50px;
+	align-items: center;
+}
+
+.contact-info{
+	width: 50%;
+	text-align: right;
+}
+
+.contact-form{
+	width: 50%;
+}
+
+
+.fillable-form {
+    background: #3D3D3D;
+    padding: 20px;
+    border-radius: 10px;
+    width: 700px;
+}
+
+.fillable-form input, .fillable-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+	border: none;   
+    border-radius: 5px;
+    background: #505050;
+    color: #C7C8CC;
+
+}
+
+.fillable-form input::placeholder, 
+.fillable-form textarea::placeholder {
+    color: #C7C8CC;
+}
+
+.fillable-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.fillable-form button {
+    width: 30%;
+    padding: 17px;
+    background: #798645;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease; 
+}
+
+.fillable-form button:hover {
+    background: #4F4F23;
+}
+/* END Section 5 */
+
+/* START Footer */
+footer{
+	padding: 20px 0;
+	text-align: center;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.05);
+}
+
+footer p{
+	font-weight: 200;
+	margin: 0;
+}
+/* END Footer */
