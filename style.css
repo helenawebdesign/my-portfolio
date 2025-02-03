@@ -326,12 +326,12 @@ a{
 }
 
 .resume{
-	color: #798645;
+	color: #FF6500;
 	transition: 0.3s ease;
 }
 
 .resume:hover{
-	color: #575F2E;
+	color: #A64300;
 }
 .contact-flex{
 	display: flex;
