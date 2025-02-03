@@ -407,3 +407,310 @@ footer p{
 	margin: 0;
 }
 /* END Footer */
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1200px){
+
+	section{
+		padding: 60px 0;
+	}
+
+	h2{
+		margin-bottom: 20px;
+	}
+
+	.hero{
+		padding: 325px 0;
+	}
+	
+	.skills-grid{
+		gap: 30px;
+	}
+
+	.portfolio-grid{
+		gap: 50px;
+	}
+
+	.portfolio-img{
+		height: 270px;
+		margin-bottom: 10px;
+	}
+
+	.about-flex{
+		gap: 40px;
+	}
+
+	.contact-flex{
+		gap: 40px;
+	}
+
+	.fillable-form{
+		width: 550px;
+	}
+}
+
+
+@media only screen and (max-width: 992px){
+
+	.hero{
+		padding: 300px 0;
+	}
+
+	.skills-grid{
+		gap: 20px;
+	}
+
+	.skills-card{
+		padding: 20px;
+	}
+
+	.skills-img{
+		height: 75px;
+	}
+
+	.portfolio-grid{
+		gap: 30px;
+	}
+
+	.portfolio-img{
+		height: 225px;
+		margin-bottom: 10px;
+	}
+
+	.about-flex{
+		gap: 30px;
+	}
+
+	.about-img{
+		width: 30%;
+	}
+
+	.about-text{
+		width: 70%;
+	}
+
+	.contact-flex{
+		gap: 20px;
+	}
+
+	.contact-info{
+		width: 30%;
+	}
+
+	.contact-form{
+		width: 70%;
+	}
+
+	.fillable-form{
+		width: 600px;
+	}
+
+}
+
+
+@media only screen and (max-width: 768px){
+
+	section{
+		padding: 40px 0;
+	}
+
+	h2{
+		font-size: 46px;
+	}
+
+	.hero{
+		padding: 250px 0;
+	}
+
+	.hero h3{
+		font-size: 50px;
+	}
+
+	.hero h1{
+		font-size: 85px;
+	}
+
+	.hero p{
+		font-size: 30px;
+	}
+
+	.skills-grid{
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.portfolio-grid{
+		grid-template-columns: 1fr;
+	}
+
+	.portfolio-img{
+		height: 350px;
+	}
+
+	.about-flex{
+		flex-direction: column;
+	}
+
+	.about-img{
+		width: 100%;
+	}
+
+	.about-text{
+		width: 100%;
+	}
+
+	.contact-flex{
+		flex-direction: column-reverse;
+	}
+
+	.contact-info{
+		width: 100%;
+		text-align: center;
+	}
+
+	.contact-form{
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 576px){
+
+	section{
+		padding: 30px 0;
+	}
+
+	h2{
+		font-size: 42px;
+		margin-bottom: 15px;
+	}
+
+	p{
+		font-size: 15px;
+	}
+
+	.hero{
+		padding: 200px 0;
+	}
+
+	.hero h3 {
+        font-size: 40px;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+    }
+
+    .hero p {
+        font-size: 25px;
+    }
+
+    .skills-grid{
+    	grid-template-columns: 1fr;
+    	gap: 15px;
+    }
+
+    .skills-card{
+    	padding: 15px;
+    }
+
+    .portfolio-grid {
+        gap: 15px;
+    }
+
+    .portfolio-img {
+        height: 250px;
+    }
+
+    .about-flex {
+        gap: 15px;
+    }
+
+    .about-img{
+    	height: 350px;
+    }
+
+    .contact-flex {
+        gap: 15px;
+    }
+
+    .contact h3{
+    	font-size: 15px;
+    }
+
+    .fillable-form {
+        width: 500px;
+    }
+
+    .fillable-form button{
+    	padding: 12px;
+    	font-size: 15px;
+    }
+
+}
+
+@media only screen and (max-width: 400px){
+
+	section{
+		padding: 20px 0;
+	}
+
+	h2 {
+        font-size: 38px;
+        margin-bottom: 10px;
+    }
+
+    h3{
+    	font-size: 17px;
+    }
+
+    p{
+    	font-size: 14px;
+    }
+
+	.hero{
+		padding: 175px 0;
+	}
+
+	.hero h3 {
+        font-size: 30px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero p {
+        font-size: 22px;
+    }
+
+    .skills-grid{
+    	gap: 10px;
+    }
+
+    .skills-img {
+        height: 60px;
+    }
+
+    .portfolio-grid {
+        gap: 10px;
+    }
+
+    .portfolio-img {
+        height: 175px;
+    }
+
+    .about-img {
+        height: 250px;
+    }
+
+    .fillable-form {
+        width: 325px;
+    }
+
+    .fillable-form button {
+        padding: 5px;
+        font-size: 14px;
+        border-radius: 15px;
+    }
+
+}
